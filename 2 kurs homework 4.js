@@ -104,7 +104,7 @@ function subArrays(arr, n, result = [], temp = []) {
 };
 
 //  7. Create constructor function which instances would be objects with already
-//     implemented method &quot;map&quot; (like Array.map)
+//     implemented method "map"(like Array.map)
 
 function ObjMap(){
     this.map=function map(fn){
