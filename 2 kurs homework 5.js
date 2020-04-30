@@ -8,15 +8,15 @@ function binarySearch(arr, n) {
         return -1;
     }else{
         for(let i=0; i<arr.length; ){
-            i = Math.floor((max + min)/2);
+            i = Math.floor((max +1+ min)/2);
             if(arr[i] === n){
                 return i;
             }else if(max===min|| Math.abs(max-min===1)){
                 return -1;
             }else if (arr[i] < n){
-                min = i +1;
+                min = i ;
             }else if(arr[i]>n) {
-                max = i -1;
+                max = i ;
             }
         };
     }
