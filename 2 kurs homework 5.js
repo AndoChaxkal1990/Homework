@@ -4,7 +4,7 @@
 function binarySearch(arr, n) {
     let min = 0;
     let max = arr.length - 1;
-    if(n<arr[min] ||n>arr[max]){
+    if(n<arr[min] ||n>arr[max] || n===undefined){
         return -1;
     }else{
         for(let i=0; i<arr.length; ){
