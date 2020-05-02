@@ -23,23 +23,3 @@ function binarySearch(arr, n) {
 }
 
 
-//. tarberak 2 rekursiayov
-
-function  binarySearch(arr,n,min=0,max=arr.length){
-    if(n<arr[min] ||n>arr[max-1]){
-        return false;
-    }else{
-        if(arr[min]===n){
-            return min
-        }else if(arr[min]<n){
-            min=Math.floor((min+1+max)/2);
-            if(arr[min]>n){
-                max=min
-                min=0
-            }
-            return binarySearch(arr, n , min,max);
-        }else{
-            return false;
-        }
-    }
-}
