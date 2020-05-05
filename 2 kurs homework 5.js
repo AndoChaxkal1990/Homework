@@ -24,6 +24,8 @@ function binarySearch(arr, n) {
 
 
 
+// tarberak 2
+
 function binarySearch(arr, n){
 let start=0;
 let end=arr.length-1;
