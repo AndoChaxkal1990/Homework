@@ -23,3 +23,21 @@ function binarySearch(arr, n) {
 }
 
 
+
+function binarySearch(arr, n){
+let start=0;
+let end=arr.length-1;
+let midIndex;
+while(start<=end){
+        midIndex=Math.floor((start+end)/2)
+        if(n===arr[midIndex]){
+            return midIndex;
+        }else if(n<arr[midIndex]){
+            end=--midIndex;
+        }else if(n>arr[midIndex]){
+            start=++midIndex;
+        }
+    };
+return false
+}
+   
