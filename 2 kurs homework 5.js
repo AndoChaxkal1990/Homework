@@ -1,31 +1,6 @@
 //  Given a sorted array and an element from that array. Find the index of that
 //  element using binary search.
 
-function binarySearch(arr, n) {
-    let min = 0;
-    let max = arr.length - 1;
-    if(n<arr[min] ||n>arr[max] || n===undefined){
-        return -1;
-    }else{
-        for(let i=0; i<arr.length; ){
-            i = Math.floor((max +1+ min)/2);
-            if(arr[i] === n){
-                return i;
-            }else if(max===min|| Math.abs(max-min===1)){
-                return -1;
-            }else if (arr[i] < n){
-                min = i ;
-            }else if(arr[i]>n) {
-                max = i ;
-            }
-        };
-    }
-}
-
-
-
-// tarberak 2
-
 function binarySearch(arr, n){
 let start=0;
 let end=arr.length-1;
@@ -42,4 +17,22 @@ while(start<=end){
     };
 return false
 }
-   
+
+
+// tarberak 2 rekursia
+
+function binarySearch(arr, n, start=0, end=arr.length-1){
+let i=Math.floor((start+end)/2)
+    if(arr[i]===n){
+        return i;
+    }
+    if(start===end){
+        return false
+    }
+    if(n>arr[i]){
+       return  binarySearch(arr,n,i+1,end)
+    }
+    if(n<arr[i]){
+        return binarySearch(arr,n,start,i-1)
+    }
+}
